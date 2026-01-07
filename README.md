@@ -1,4 +1,4 @@
-# Weight Tracker CLI
+# w8 (Weight Tracker CLI)
 
 A simple command-line tool to track your weight over time without any shame.
 
