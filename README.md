@@ -12,22 +12,22 @@ pip install matplotlib
 
 ```bash
 # Add weight (uses today's date)
-python weight_tracker.py add 75.5
+python w8.py add 75.5
 
 # Add weight for specific date
-python weight_tracker.py add 74.8 2024-12-20
+python w8.py add 74.8 2024-12-20
 
 # View all entries
-python weight_tracker.py list
+python w8.py list
 
 # Generate graph
-python weight_tracker.py graph
+python w8.py graph
 
 # Delete an entry
-python weight_tracker.py delete 2024-12-20
+python w8.py delete 2024-12-20
 
 # Clear all data
-python weight_tracker.py clear
+python w8.py clear
 ```
 
 ## Data Storage
