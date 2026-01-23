@@ -1,11 +1,8 @@
-# Weight tracker data file
 .weight_tracker_data.json
 
-# Generated graphs
 *.png
 weight_graph.png
 
-# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -27,19 +24,16 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual environments
 venv/
 ENV/
 env/
 .venv/
 
-# IDE
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
 
-# OS
 .DS_Store
 Thumbs.db

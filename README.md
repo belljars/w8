@@ -11,23 +11,17 @@ pip install matplotlib
 ## Usage
 
 ```bash
-# Add weight (uses today's date)
-python w8.py add 75.5
+python w8.py add 75.5 # add weight for today's date
 
-# Add weight for specific date
-python w8.py add 74.8 2024-12-20
+python w8.py add 74.8 2024-12-20 # add weight for a specific date
 
-# View all entries
-python w8.py list
+python w8.py list # list all entries
 
-# Generate graph
-python w8.py graph
+python w8.py graph # generate an graph with matplotlib
 
-# Delete an entry
-python w8.py delete 2024-12-20
+python w8.py delete 2024-12-20 # delete an entry
 
-# Clear all data
-python w8.py clear
+python w8.py clear # clear all data
 ```
 
 ## Data Storage

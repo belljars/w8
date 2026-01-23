@@ -25,14 +25,12 @@ def add_weight(weight, date=None):
     if date is None:
         date = datetime.now().strftime("%Y-%m-%d")
     else:
-        # Validate date format
         try:
             datetime.strptime(date, "%Y-%m-%d")
         except ValueError:
             print("Error: Invalid date format. Please use YYYY-MM-DD.")
             return
     
-    # Check if entry for this date already exists
     for entry in data["entries"]:
         if entry["date"] == date:
             entry["weight"] = weight
@@ -41,7 +39,7 @@ def add_weight(weight, date=None):
             return
     
     data["entries"].append({"date": date, "weight": weight})
-    # Sort entries by date
+    # sort entries by date
     data["entries"].sort(key=lambda x: x["date"])
     save_data(data)
     print(f"Added weight for {date}: {weight} kg")
@@ -81,7 +79,6 @@ def list_entries():
     
     print("=" * 60)
     
-    # Overall summary
     if len(entries) > 1:
         last_weight = entries[-1]["weight"]
         total_change = last_weight - first_weight
@@ -164,7 +161,6 @@ def generate_graph(output_file="weight_graph.png"):
     ax.axhline(y=min_weight, color='green', linestyle=':', alpha=0.5)
     ax.axhline(y=max_weight, color='red', linestyle=':', alpha=0.5)
     
-    # Calculate stats for subtitle
     first_weight = weights[0]
     last_weight = weights[-1]
     total_change = last_weight - first_weight
@@ -175,10 +171,8 @@ def generate_graph(output_file="weight_graph.png"):
     ax.text(0.5, -0.18, stats_text, transform=ax.transAxes, 
             ha='center', fontsize=10, style='italic')
     
-    # Tight layout
     plt.tight_layout()
     
-    # Save the graph
     plt.savefig(output_file, dpi=150, bbox_inches='tight', 
                 facecolor='white', edgecolor='none')
     plt.close()
